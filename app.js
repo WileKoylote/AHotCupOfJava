@@ -9,27 +9,32 @@
           
           cupOfjoe.orderUp();
 
+    //Array + For Loop "Repeats until all items have been outputed"
+    var menu = ["Latte", "Cappachino", "Espresso"];
+    for (var i=0; i < menu.length; i++) {console.log("Try a" + " " +menu[i])};
+
     //Function + Parameters
     const coffeeTopping = "Add Cream";
 
     function makeCream(ing1, ing2){
-    console.log(coffeeTopping);
-    console.log("Mix" + ing1 + "with" + ing2)};
+        console.log(coffeeTopping);
+        console.log("Mix" + " " + ing1 +  " " + "with" + " " + ing2)};
 
     makeCream("milk", "cream");
     
-    //Boolean - "Both variables pull a random number between 0 - 1 and outputs based on which is greater"
-    var rabbit = Math.random();
-    var turtle = Math.random();
+    //Boolean - "Both variables pull either 0 or 1 and outputs based on which is greater"
+    var rabbit = Math.floor((Math.random() * 2) + 0);
+    var turtle = Math.floor((Math.random() * 2) + 0);
 
     if (rabbit > turtle){console.log("Rabbit Wins!");}
-    else if (turtle > rabbit){console.log("Turtle Wins!");}
+    else if (turtle >= rabbit){console.log("Turtle Wins!");}
 
     //Number Method - "Outputs generated numbers for each random variable"
     console.log(rabbit.valueOf());
     console.log(turtle.valueOf());
 
-    //Switch - "Rolls a six sided dice and outputs the response based on the variables number"
+    //Switch + While Loop - "Rolls a six sided dice and outputs the response based on the variables number. 
+    //If it rolls less than 6, it will reroll until 6."
     let roll = Math.floor((Math.random() * 6) + 1);
     
     switch (roll) {
@@ -60,3 +65,5 @@
         default: console.log (`${roll}? This isn't a DnD campaign you nerd.`)
     }
 
+    while (roll < 6) {console.log("Reroll!"); roll++;}
+    if (roll === 6) {console.log("You Rerolled a 6!")}
