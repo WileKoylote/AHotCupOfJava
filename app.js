@@ -27,7 +27,7 @@
     var turtle = Math.floor((Math.random() * 2) + 0);
 
     if (rabbit > turtle){console.log("Rabbit Wins!");}
-    else if (turtle >= rabbit){console.log("Turtle Wins!");}
+    else if (turtle >= rabbit){console.log("Turtle Wins!");};
 
     //Number Method - "Outputs generated numbers for each random variable"
     console.log(rabbit.valueOf());
@@ -62,8 +62,18 @@
 
         break;
 
-        default: console.log (`${roll}? This isn't a DnD campaign you nerd.`)
-    }
+        default: console.log (`${roll}? This isn't a DnD campaign you nerd.`);
+    };
 
-    while (roll < 6) {console.log("Reroll!"); roll++;}
-    if (roll === 6) {console.log("You Rerolled a 6!")}
+    while (roll < 6) {console.log("Reroll!"); roll++;};
+    if (roll === 6) {console.log("You Rerolled a 6!");};
+
+    //DOM Manipulation - "It doesnt work at all no matter what I do. I dont fully understand it as a result :(. All I get is errors."
+    const title = document.getElementById("title");
+    const button = document.getElementById("makejava");
+
+    button.addEventListener("click", () => {makeJava.classList.add("hidden") = "none";});
+
+    const text = document.querySelector("h1");
+    h1.style.color = "red";
+    
