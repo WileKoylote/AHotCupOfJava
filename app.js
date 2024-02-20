@@ -3,14 +3,15 @@
     console.log({name});
     console.log(name.length);
 
-    //Object + String Variable - "I think this counts as a concatenated string variable?"
+    //Object + Method + String Variable - "Method outputs combined objects as a word."
     const cupOfjoe = {m:"M", o:"O", c:"C", h:"H", a:"A",
           orderUp: function() {console.log(`${this.m} ${this.o} ${this.c} ${this.h} ${this.a}`)}};
-          
           cupOfjoe.orderUp();
 
-    //Array + For Loop "Repeats until all items have been outputed"
+    //Array + + Method + For Loop "Repeats until all items have been outputed"
     var menu = ["Latte", "Cappachino", "Espresso"];
+    let choice = menu.indexOf("Latte");
+    console.log(menu[choice]);
     for (var i=0; i < menu.length; i++) {console.log("Try a" + " " +menu[i])};
 
     //Function + Parameters
@@ -67,13 +68,4 @@
 
     while (roll < 6) {console.log("Reroll!"); roll++;};
     if (roll === 6) {console.log("You Rerolled a 6!");};
-
-    //DOM Manipulation - "It doesnt work at all no matter what I do. I dont fully understand it as a result :(. All I get is errors."
-    const title = document.getElementById("title");
-    const button = document.getElementById("makejava");
-
-    button.addEventListener("click", () => {makeJava.classList.add("hidden") = "none";});
-
-    const text = document.querySelector("h1");
-    h1.style.color = "red";
     
